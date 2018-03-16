@@ -1,0 +1,162 @@
+﻿* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    background-color: burlywood;
+    /* border: dotted;*/
+}
+
+.Orla {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+/*    border: dotted red thin;*/
+    width: 800px;
+    height: 595px;
+    background-image: url('../img68/1967-1968_Vacia.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.orlaImagen {
+    position: relative;
+    float: left;
+    width: 280px;
+    height: 595px;
+    padding: 0px 0px 0px 0px;
+    /*border: solid green thick;*/
+    
+}
+
+.fotos {
+    float: left;
+    position: relative;
+    /*top: 10px;*/
+    height: 595px;
+    width: 505px;
+    padding: 0px 0px 0px 0px;
+    /*border: solid blue thick;*/
+}
+
+.foto {
+    float: left;
+    width: 56px;
+    height: 72px;
+    background-size: 56px Auto;
+    padding: 0px 0px 0px 0px;
+    margin: 2px 2px 2px 2px;
+    background-image: initial;
+    background-repeat: no-repeat;
+}
+
+
+
+.fotoG {
+    float: left;
+    width: 112px;
+    height: 72px;
+    background-size: 56px Auto;
+    padding: 0px 0px 0px 0px;
+    margin: 1px 1px 1px px;
+    background-image: initial;
+    background-repeat: no-repeat;
+    background-position: left center;
+    // border: dotted;
+}
+
+.marcoA {
+    position: absolute;
+    z-index: 10;
+    display: none;
+    bottom: 0px;
+    right: 0px;
+    width: 297%;
+    height: 150%;
+    /*    border: medium solid red;*/
+}
+
+.fotoO {
+    position: relative;
+    float: left;
+    height: 100%;
+    z-index: 50;
+}
+
+#creditos {
+    position: absolute;
+    display: inline;
+    width: 10%;
+    height: 10%;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: left;
+    white-space: pre;
+    background-color: rgba(148, 0, 0, .0);
+    color: rgba(255,255,255,.0);
+    z-index: 100;
+    font-size: 1em;
+    font-weight: 900;
+}
+
+    #creditos:hover {
+        width: auto;
+        height: auto;
+        padding: 1em;
+        bottom: -50%;
+        right: 0;
+        margin: .5em 0 0.5em;
+    background-color: rgba(148, 0, 0, 1);
+    color: white;
+    }
+
+#titulo {
+    position: absolute;
+    width: 96%;
+    border: 0;
+    margin: 0;
+    top: 35%;
+    right: 0;
+    background-color: rgba(108, 58, 58, 0.80);
+    text-align: center;
+    padding: .5em;
+}
+
+#textoTitulo {
+    font-size: 2.1em;
+    color: rgb(255, 0, 0);
+    font-weight: 900;
+}
+
+
+#botonMostrarCarrusel {
+    position: absolute;
+    z-index: 200;
+    clear: both;
+    left: 25%;
+    top: 5%;
+    color: rgba(0, 0, 0, 0.00);
+    cursor: pointer;
+}
+#botonMostrarCarrusel:hover{
+    background-color:palevioletred;
+    opacity:.5;
+}
+#btCerrar {
+    z-index: 200;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    cursor:pointer;
+}
+#btCerrar:hover{
+    opacity:.5;
+    background-color:palevioletred;
+}
