@@ -82,9 +82,34 @@ function mostrarDos(o) {
         o.children[0].style.top = "0px"
     }
 }
+
+function mostrarDosX(o) {
+    if (o.style.display = "none") {
+        o.style.display = "inline";
+	o.style.opacity = "1";
+        o.style.width= "297%";
+        o.style.height= "150%";
+        o.style.border= "medium solid red";
+    }
+    else {
+        o.style.display = "none"
+    }
+    if (event.clientY < window.innerHeight * .2) {
+        o.style.top = "0px"
+    }
+}
+
 function ocultarDos(o) {
     o.style.display = "none";
 
+}
+
+function ocultarDosX(o) {
+    o.style.display = "inline";
+	o.style.opacity = "0";
+        o.style.width= "100%";
+        o.style.height= "100%";
+        o.style.border= "medium solid red";
 }
 
 function mostrarCarrusel() {
