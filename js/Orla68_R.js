@@ -16,6 +16,7 @@ function ini() {
 //        "escala: " + escala);
     asignarDimensiones();
     document.getElementById("creditos").innerHTML = creditosTexto;
+    document.getElementById("orlaFotos").style.visibility = "visible";
 }
 function calcularEscala() { 
     if (window.innerWidth / orlaWidth > window.innerHeight / orlaHeight) { escala = window.innerHeight / orlaHeight; }
