@@ -32,6 +32,16 @@ body {
     /*border: solid green thick;*/
     
 }
+#X_Orla {
+    float:left;
+	display:none;
+    position: relative;
+/*    width: 110px; */
+    padding: 10px 0px 0px 10px;
+    border: solid green thin;
+}
+
+
 
 .fotos {
     float: left;
@@ -40,7 +50,7 @@ body {
     height: 595px;
     width: 505px;
     padding: 10px 0px 0px 10px;
-    visibility:hidden;
+    visibility: hidden;
     /*border: solid blue thick;*/
 }
 
@@ -182,16 +192,15 @@ margin:0;
 #botonMostrarCarrusel {
     position: absolute;
     z-index: 200;
-    clear: both;
-    left: 25%;
+    left: 70%;
     top: 5%;
-    color: rgba(0, 0, 0, 0.00);
+    color: rgba(0, 0, 0, 0);
     cursor: pointer;
 }
-#botonMostrarCarrusel:hover{
-    background-color:palevioletred;
-    opacity:.5;
-}
+    #botonMostrarCarrusel:hover, #botonMostrarXOrla:hover {
+        background-color: palevioletred;
+        opacity: .5;
+    }
 #btCerrar {
     z-index: 200;
     position: absolute;
@@ -203,4 +212,13 @@ margin:0;
 #btCerrar:hover{
     opacity:.5;
     background-color:palevioletred;
+}
+#botonMostrarXOrla {
+    position: absolute;
+    z-index: 200;
+    width:4em;
+    left: 70%;
+    top: 74%;
+    color: rgba(0, 0, 0, 0);
+    cursor: pointer;
 }
