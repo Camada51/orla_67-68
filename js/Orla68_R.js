@@ -1,6 +1,7 @@
 ﻿var imgAnt = "";
 var escala = 0;
 var orlaWidth = 780;
+//var orlaWidth = 890;
 var orlaHeight = 595;
 var orlaImagenWidth = 284;
 var orlaImagenHeight = 595;
@@ -9,6 +10,9 @@ var orlaFotosHeight = 595;
 var orlaFotoWidth = 47;
 var orlaFotoHeight = 61;
 var carruselImgCarrusel = 700;
+var XOrlaWidth = 110;
+
+
 function ini() {
     calcularEscala();
 //    alert("ventana ancho: " + window.innerWidth + "\n" +
@@ -24,6 +28,7 @@ function calcularEscala() {
     if (escala <= 1) { escala = 1; }
 }
 function asignarDimensiones(){
+
     changecss('.Orla', 'width', escala * orlaWidth+'px');
     changecss('.Orla', 'height', escala * orlaHeight+'px');
     changecss('.orlaImagen', 'width', escala * orlaImagenWidth+'px');
@@ -33,6 +38,8 @@ function asignarDimensiones(){
     changecss('.foto', 'width', escala * orlaFotoWidth+'px');
     changecss('.foto', 'height', escala * orlaFotoHeight + 'px');
     changecss('.foto', 'background-size', escala * orlaFotoWidth + 'px'+' Auto');
+//    changecss('#X_Orla', 'width', escala * XOrlaWidth+ 'px');
+
 }
 function ponerFoto2018(o) {
  //   alert("Hola " + o.id);
@@ -128,4 +135,20 @@ function mostrarCarrusel() {
 function ocultarCarrusel(o) {
     document.getElementById('miMarco').style.display = 'none';
     document.getElementById(o.id).style.display = 'none';
+}
+
+function mostrarXOrla() {
+    var estadoVisibleXOrla = document.getElementById('X_Orla').style.display
+    if (estadoVisibleXOrla != "inline") {
+        document.getElementById('X_Orla').style.display = "inline";
+
+        document.getElementById('X_Orla').style.width = escala * XOrlaWidth + 'px';
+        document.getElementById('orla').style.width = document.getElementById('orla').offsetWidth +  escala * XOrlaWidth + 8 +"px";
+
+    }
+    else {
+        document.getElementById('X_Orla').style.display = "none";
+        document.getElementById('orla').style.width = escala * orlaWidth+'px';
+
+    }
 }
