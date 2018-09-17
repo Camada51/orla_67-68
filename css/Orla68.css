@@ -15,7 +15,7 @@ body {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-/*    border: dotted red thin;*/
+    /*    border: dotted red thin;*/
     width: 800px;
     height: 595px;
     background-image: url('../img68/1967-1968_Vacia.jpg');
@@ -30,13 +30,13 @@ body {
     height: 595px;
     padding: 0px 0px 0px 0px;
     /*border: solid green thick;*/
-    
 }
+
 #X_Orla {
-    float:left;
-	display:none;
+    float: left;
+    display: none;
     position: relative;
-/*    width: 110px; */
+    /*    width: 110px; */
     padding: 10px 0px 0px 10px;
     border: solid green thin;
 }
@@ -54,15 +54,19 @@ body {
     /*border: solid blue thick;*/
 }
 
-.foto {
+.fotoControl {
+    position:relative;
     float: left;
-    width: 56px;
-    height: 72px;
-    background-size: 56px Auto;
+    /*width: 56px;
+    height: 72px;*/
+    height:100%;
+    width:100%;
+    /*background-size: 56px Auto;*/
     padding: 0px 0px 0px 0px;
-    margin: 2px 2px 2px 2px;
-    background-image: initial;
-    background-repeat: no-repeat;
+    margin: 0px 0px 0px 0px;
+    /*background-image: initial;
+    background-repeat: no-repeat;*/
+    z-index:3;
 }
 
 
@@ -71,7 +75,7 @@ body {
     float: left;
     width: 112px;
     height: 72px;
-    background-size: 56px Auto;
+    background-size: 56px auto;
     padding: 0px 0px 0px 0px;
     margin: 1px 1px 1px px;
     background-image: initial;
@@ -80,48 +84,55 @@ body {
     // border: dotted;
 }
 
-.marcoA {
+.marcoA { /*utilizado para cada alumno con fotos antes y ahora*/
+    position: relative;
+    /*display: inline-block;*/
+    bottom: 0px;
+    right: 0px;
+    float: left;
+    width: 56px;
+    height: 72px;
+    background-size: 56px auto;
+    background-image: initial;
+    background-repeat: no-repeat;
+    padding: 0px 0px 0px 0px;
+    margin: 1.7px 2px 1.7px 2px;
+    /*z-index: 15;*/
+}
+
+.marcoAH {/*utillizado para preentar las fotos antes y ahora ampliadas*/
     position: absolute;
-    z-index: 10;
+    z-index: 1;
     display: none;
     bottom: 0px;
     right: 0px;
-    width: 297%;
-    height: 150%;
-    /*    border: medium solid red;*/
+    width: auto;
+    height: auto;
+    /*opacity: 0;*/
+    overflow: hidden;
+    margin: 0;
+        border: 2px solid red;
 }
-.marcoAH {
-    position: absolute;
-    z-index: 10;
-    display: inline;
-    bottom: 0px;
-    right: 0px;
-    width: 100%;
-    height: 100%;
-	opacity:0;
-overflow:hidden;
-margin:0;
-    /*    border: medium solid red;*/
-}
-.marcoAH:hover{
-	display:inline;
-    width: 297%;
-    height: 150%;
-	opacity:1;
+
+    /*.marcoAH:hover, .marcoAH:active {
+        display: inline;
+        width: 297%;
+        height: 150%;
+        opacity: 1;
         border: medium solid red;
-}
+    }*/
 
 .marcoAH0 {
     position: absolute;
-    z-index: 10;
-    display: inline;
+    z-index: 5;
+    display: none;
     bottom: 0px;
     right: 0px;
     width: 100%;
     height: 100%;
-	opacity:0;
-overflow:hidden;
-margin:0;
+    opacity: 0;
+    overflow: hidden;
+    margin: 0;
     /*    border: medium solid red;*/
 }
 /*.marcoAH0:hover{
@@ -136,9 +147,13 @@ margin:0;
 
 .fotoO {
     position: relative;
-    float: left;
-    height: 100%;
-    z-index: 50;
+    display: inline;
+    /*height: 100%;*/
+    z-index: 5;
+    /*display:none;*/
+    padding:0;
+    border:0;
+    margin:0;
 }
 
 #creditos {
@@ -159,15 +174,15 @@ margin:0;
     font-weight: 900;
 }
 
-    #creditos:hover {
+    #creditos:hover, #creditos:active {
         width: auto;
         height: auto;
         padding: 1em;
         bottom: -50%;
         right: 0;
         margin: .5em 0 0.5em;
-    background-color: rgba(148, 0, 0, 1);
-    color: white;
+        background-color: rgba(148, 0, 0, 1);
+        color: white;
     }
 
 #titulo {
@@ -189,6 +204,24 @@ margin:0;
 }
 
 
+
+
+#botonMostrarXOrla:hover {
+    background-color: palevioletred;
+    opacity: .5;
+}
+
+
+#botonMostrarXOrla {
+    position: absolute;
+    z-index: 200;
+    width: 4em;
+    left: 70%;
+    top: 74%;
+    color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
 #botonMostrarCarrusel {
     position: absolute;
     z-index: 200;
@@ -196,29 +229,39 @@ margin:0;
     top: 5%;
     color: rgba(0, 0, 0, 0);
     cursor: pointer;
+    overflow: hidden;
+    width: 2em;
+    height: 1em;
+    padding:.3em;
 }
-    #botonMostrarCarrusel:hover, #botonMostrarXOrla:hover {
+
+    #botonMostrarCarrusel:hover, #botonMostrarCarrusel:active {
         background-color: palevioletred;
-        opacity: .5;
+        opacity: 1;
+        // border: 6px double blue;
+        color: rgba(0, 0, 0, 1);
+        width: 35em;
+        height: auto;
+        overflow: visible;
     }
-#btCerrar {
-    z-index: 200;
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: none;
-    cursor:pointer;
-}
-#btCerrar:hover{
-    opacity:.5;
-    background-color:palevioletred;
-}
-#botonMostrarXOrla {
-    position: absolute;
-    z-index: 200;
-    width:4em;
-    left: 70%;
-    top: 74%;
-    color: rgba(0, 0, 0, 0);
-    cursor: pointer;
-}
+    #botonMostrarCarrusel ul{
+        background-color:white;
+    }
+    #botonMostrarCarrusel li:hover, li:active {
+        cursor: pointer;
+        font-weight: 900;
+        font-size: 1.1em;
+    }
+    #btCerrar {
+        z-index: 1000;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        cursor: pointer;
+    }
+
+    #btCerrar:hover {
+        opacity: .5;
+        background-color: palevioletred;
+    }
