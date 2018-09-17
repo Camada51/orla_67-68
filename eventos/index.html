@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Reunión</title>
+
+    <link type="text/css" href="css/eventos.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/eventosString.js"></script>
+    <!--<script type="text/javascript" src="js/eventos.js"></script>-->
+
+
+    <script src="js/evento.js"></script>
+</head>
+<body onload="iniPage();" onresize=calcularEscala();>
+    <div id="eventoDiv">
+        <div id="reunionEvt">
+            <div id="tituloEvt"></div>
+            <div id="fechaPoblacionLocal">
+                <div id="fechaEvt"></div>
+                <div id="poblacionEvt"></div>
+                <div id="localEvt"></div>
+            </div>
+            <div id="asistentesMenu">
+                <div>
+                    <div class="cabecera">Asistentes</div>
+                    <div style="display:inline;width:100%">
+                        <div id="asistentesEvt"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="cabecera">Menú y otros...</div>
+                    <div id="menuEvt"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="carruselExt">
+        <div id="miMarco" style="display:block">
+            <div id="carruselDiv">
+                <div id="izqDiv" onclick="anterior();"><span><</span></div>
+                <img id="imgCarrusel" src="" />
+                <div id="dchoDiv" onclick="siguiente();"><span>></span></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
