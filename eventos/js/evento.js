@@ -165,10 +165,10 @@ function rellenarAsistentes() {
     var nombre;
     var asisArray;
 
-    if (asistentesEvt.includes(";")) {
+    if (asistentesEvt.indexOf(";")>=0) {
         asisArray = asistentesEvt.split(";");
         for (e in asisArray) {
-            if (asisArray[e].includes(",")) {
+            if (asisArray[e].indexOf(";") >= 0) {
                 apellidos = asisArray[e].split(",")[0].trim();
                 nombre = asisArray[e].split(",")[1].trim();
                 asisArray[e] = nombre + " " + apellidos;
