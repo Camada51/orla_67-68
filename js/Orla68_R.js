@@ -149,8 +149,8 @@ function ocultarCarrusel(o) {
 }
 
 function mostrarXOrla() {
-    var estadoVisibleXOrla = document.getElementById('X_Orla').style.display
-    if (estadoVisibleXOrla != "inline") {
+    var estadoVisibleXOrla = document.getElementById('X_Orla').style.display;
+    if (estadoVisibleXOrla !== "inline") {
         document.getElementById('X_Orla').style.display = "inline";
 
         document.getElementById('X_Orla').style.width = escala * XOrlaWidth + 'px';
@@ -273,4 +273,14 @@ function ocultarDosY(oO) {
     //o.childNodes[0].height = "100%";
     //o.childNodes[1].height = "100%";
 
+}
+
+
+function mostrarMenuEvt(el) {
+    if (! el.classList.contains("botonMostrarCarrusel_hover")) {
+        el.classList.add("botonMostrarCarrusel_hover");
+    }
+    else {
+        el.classList.remove("botonMostrarCarrusel_hover");
+    }
 }
