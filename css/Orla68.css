@@ -222,7 +222,7 @@ body {
     cursor: pointer;
 }
 
-#botonMostrarCarrusel {
+.botonMostrarCarrusel {
     position: absolute;
     z-index: 200;
     left: 70%;
@@ -235,7 +235,7 @@ body {
     padding:.3em;
 }
 
-    #botonMostrarCarrusel:hover, #botonMostrarCarrusel:active {
+    .botonMostrarCarrusel_hover {
         background-color: palevioletred;
         opacity: 1;
         // border: 6px double blue;
@@ -244,10 +244,10 @@ body {
         height: auto;
         overflow: visible;
     }
-    #botonMostrarCarrusel ul{
-        background-color:white;
+    .botonMostrarCarrusel ul{
+        background-color: antiquewhite;
     }
-    #botonMostrarCarrusel li:hover, li:active {
+    .botonMostrarCarrusel li:hover, li:active {
         cursor: pointer;
         font-weight: 900;
         font-size: 1.1em;
