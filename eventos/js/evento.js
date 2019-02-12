@@ -165,19 +165,22 @@ function rellenarAsistentes() {
     var nombre;
     var asisArray;
 
-    if (asistentesEvt.indexOf(";")>=0) {
+    if (asistentesEvt.indexOf(";")>=0) { //asistentes separados por ";"
         asisArray = asistentesEvt.split(";");
         for (e in asisArray) {
-            if (asisArray[e].indexOf(";") >= 0) {
+            if (asisArray[e].indexOf(",") >= 0) {
                 apellidos = asisArray[e].split(",")[0].trim();
                 nombre = asisArray[e].split(",")[1].trim();
                 asisArray[e] = nombre + " " + apellidos;
             }
         }
-        if (asisArray.length > altoCol) dividirColunas(asisArray);
-        //return asisArray.join("<br/>");
+        if (asisArray.length > altoCol)
+		{ dividirColunas(asisArray);}
+        else {
+		document.getElementById("asistentesEvt").innerHTML = asisArray.join("<br/>");
+		}
     }
-    else {
+    else {	//asistentes separados supuestamente por ","
         //return asistentesEvt.replace(/,/g, "<br/>");
         document.getElementById("asistentesEvt").innerHTML = asistentesEvt.replace(/,/g, "<br/>")
     }
