@@ -250,7 +250,7 @@ function mostrarDosY(oO) {
     o.children[0].style.height = "100%";
     if (o.children.length > 1) {
         o.children[1].style.height = "100%";
-        o.style.width = (o.children[0].offsetWidth + o.children[1].offsetWidth + 5) + "px";
+        o.style.width = (o.children[0].offsetWidth + o.children[1].offsetWidth + 6) + "px";
         //o.style.width = "auto";
     }
     else {
